@@ -1,0 +1,40 @@
+public class conversions {
+    /** Convert from feet to meters */
+    public static void main(String[]args){
+        
+        //declaring variables
+        String feet = "Feet"; 
+        String meters = "Meters"; 
+        
+        //creating header
+        System.out.print(feet + "    " +  meters  + "    " + "|"); 
+        System.out.print("   " + meters + "    " +  feet  + "    \n");
+        System.out.println("---------------------------------------------");
+        
+
+        //Having trouble making the last outputs to align with the rest of the code when printing. 
+        for (double foot = 1.0, meter = 20.0; foot <= 10.0; foot++, meter += 5.0) {
+            double meterTotal = footToMeter(foot);
+            double footTotal = meterToFoot(meter);
+            System.out.printf("%.1f     ", foot);
+            System.out.printf("%.3f     ", meterTotal);
+            System.out.print("|");
+            System.out.printf("   %.1f   ", meter);
+            System.out.printf("   %.3f\n", footTotal);
+        }
+    }
+
+    public static double footToMeter(double foot) {
+        /** The formula for the conversion is: */
+           return 0.306 * foot; 
+       }
+   
+        public static double meterToFoot(double meter) {
+           /**This is the formula for meter to foot: */
+           return 3.279 * meter; 
+       }
+
+    
+    }
+
+
